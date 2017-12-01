@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li>Filter:</li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
