@@ -40,35 +40,35 @@ Route::get('/',[
 Route::group(['prefix' => 'admin'], function (){
 
     Route::get('', [
-        'uses' => 'BlogController@getAdminHome',
+        'uses' => 'AdminController@getAdminHome',
         'as' => 'admin.home'
     ]);
 
     Route::get('create', [
-        'uses' => 'BlogController@getAdminCreate',
+        'uses' => 'AdminController@getAdminCreate',
         'as' => 'admin.create'
     ]);
 
 
     Route::post('create', [
-        'uses' => 'BlogController@postAdminCreate',
+        'uses' => 'AdminController@postAdminCreate',
         'as' => 'admin.create'
     ]);
 
 
     Route::get('edit/{id}', [
-        'uses' => 'BlogController@postAdminEdit',
+        'uses' => 'AdminController@postAdminEdit',
         'as' => 'admin.edit'
     ]);
 
     Route::post('edit', [
-        'uses' => 'BlogController@postAdminUpdate',
+        'uses' => 'AdminController@postAdminUpdate',
         'as' => 'admin.update'
     ]);
 
 
     Route::post('delete', [
-        'uses' => 'BlogController@postAdminDelete',
+        'uses' => 'AdminController@postAdminDelete',
         'as' => 'admin.delete'
     ]);
 

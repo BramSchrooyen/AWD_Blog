@@ -59,6 +59,9 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
+                                        <a href="{{ route('home') }}">
+                                            Dashboard
+                                        </a>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -78,14 +81,12 @@
     </nav>
 
 
-    {{--@yield('blogmap')--}}
-
-
-
     @yield('content')
 
     @include('partials.sidebar')
 
     @yield('blogs')
+
+    {{--@yield('archive')--}}
 
 </div>
