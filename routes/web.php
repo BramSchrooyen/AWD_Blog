@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/', [
     'uses' => 'BlogController@getBlogIndex',
     'as' => 'content.blogindex'
@@ -29,6 +30,10 @@ Route::get('blog/{id}', [
     'as' => 'content.blog'
 ]);
 
+Route::get('/',[
+    'uses' => 'MapController@getBlogMap',
+    'as' => 'content.blogmap'
+]);
 
 Route::group(['prefix' => 'admin'], function (){
 

@@ -17,8 +17,9 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('content');
-            $table->double('lat');
-            $table->double('long');
+            $table->date('gigdate');
+            $table->double('lat',20,10);
+            $table->double('long',20,10);
             $table->integer('user_id');
             $table->timestamps();
         });

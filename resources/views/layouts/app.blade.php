@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -73,7 +74,14 @@
 
         @include('partials.sidebar')
 
-        @yield('content')
+
+        <div class="container">
+            @yield('blogmap')
+        </div>
+
+        <div class="container">
+            @yield('blogindex')
+        </div>
     </div>
 
     <!-- Scripts -->

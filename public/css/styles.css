@@ -59,3 +59,7 @@ html, body {
     margin-bottom: 30px;
 }
 
+#mapdiv{
+    width: 350px;
+    height: 250px;
+}

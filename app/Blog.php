@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
 
-    protected $fillable = ['title', 'content', 'lat', 'long'];
+    protected $fillable = ['title', 'content', 'gigdate', 'lat', 'long'];
 
     public function likes(){
         return $this->hasMany('App\Like');

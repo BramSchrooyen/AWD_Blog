@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('blogindex')
     @if(Session::has('info'))
         <div class="row">
             <div class="col-md-12">
@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h1 class="post-title">{{ $blog->title }}</h1>
-                <p>{{ $blog->content }}!</p>
-                <p><a href="{{ route('content.blog', ['id' => $blog->id]) }}">Meer details...</a></p>
+                <p>{{ $blog->content }}</p>
+               {{--<p><a href="{{ route('content.blog', ['id' => $blog->id]) }}">Meer details...</a></p>--}}
 
-                <form action="" method="post">
+               {{--<form action="" method="post">
 
                     <input type="hidden" class="form-control" id="id" name="id" \
                            value="{{ $blog->id }}">
@@ -28,7 +28,7 @@
 
                     <button type="submit" class="btn btn-primary">Like</button>
 
-                </form>
+                </form>--}}
             </div>
         </div>
         <hr>
