@@ -28,11 +28,8 @@ class BlogController extends Controller
         return view('admin.home', ['blogs' => $blogs]);
     }
 
-    public function getItem($id)
+    public function getBlog($id)
     {
-
-        /*$item = new Item();
-        $item = $item->getItem($session, $id);*/
 
         $blog = Blog::where("id", "=", $id)->first();
         return view('content.blog', ['blog' => $blog]);

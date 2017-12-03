@@ -1,6 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <div class="row">
         <div class="col-md-12">
             <p class="quote">{{ $blog->title }}</p>
@@ -13,13 +20,13 @@
         </div>
     </div>
 
-    <div class="row">
+    {{--<div class="row">
         <div class="col-md-12">
             <p>Likes: </p>
             <p>{{  count($blog->likes) }}</p>
         </div>
-    </div>
-    <div class="row">
+    </div>--}}
+    {{--<div class="row">
         <div class="col-md-12">
             <p>Tags: </p>
 
@@ -30,5 +37,5 @@
             @endforeach
 
         </div>
-    </div>
+    </div>--}}
 @endsection

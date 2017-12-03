@@ -10,9 +10,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+    <!-- Styles-->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <!-- Ik gebruik echo time statement om css steeds vers te laden en niet uit cache-->
+    <link href="{{ asset('css/styles.css') }}?<?php echo time(); ?>" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -72,16 +73,11 @@
             </div>
         </nav>
 
-        @include('partials.sidebar')
-
 
         <div class="container">
-            @yield('blogmap')
+            @yield('content')
         </div>
 
-        <div class="container">
-            @yield('blogindex')
-        </div>
     </div>
 
     <!-- Scripts -->

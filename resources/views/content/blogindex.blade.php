@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('blogindex')
+@section('content')
     @if(Session::has('info'))
         <div class="row">
             <div class="col-md-12">
@@ -18,7 +18,7 @@
             <div class="col-md-12 text-center">
                 <h1 class="post-title">{{ $blog->title }}</h1>
                 <p>{{ $blog->content }}</p>
-               {{--<p><a href="{{ route('content.blog', ['id' => $blog->id]) }}">Meer details...</a></p>--}}
+               <p><a href="{{ route('content.blog', ['id' => $blog->id]) }}">Meer details...</a></p>
 
                {{--<form action="" method="post">
 

@@ -11,16 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/', [
+Route::get('/', function () {
+    return view('layouts.master');
+})->name('layouts.master');
+
+Route::get('/blogs', [
     'uses' => 'BlogController@getBlogIndex',
     'as' => 'content.blogindex'
 ]);
