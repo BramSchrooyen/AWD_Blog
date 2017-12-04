@@ -64,4 +64,9 @@ html, body {
     height: 100vh;
 }
 
+#mapdiv-create{
+    width:25%;
+    height:25vh;
+}
+
 

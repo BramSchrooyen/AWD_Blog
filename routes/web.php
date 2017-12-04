@@ -17,6 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses'=>'LanguageController@switchLang']);
 
 Route::get('/', function () {
     return view('layouts.master');
@@ -43,6 +44,7 @@ Route::group(['prefix' => 'admin'], function (){
         'uses' => 'AdminController@getAdminHome',
         'as' => 'admin.home'
     ]);
+    //ERROR ^ veranderen /home naar /admin
 
     Route::get('create', [
         'uses' => 'AdminController@getAdminCreate',

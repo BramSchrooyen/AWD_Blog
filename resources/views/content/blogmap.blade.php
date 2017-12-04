@@ -12,23 +12,23 @@
     <script>
 
 
-        function initMap() {}; // now it IS a function and it is in global
+                function initMap() {}; // now it IS a function and it is in global
 
 
-            initMap = function() {
+                initMap = function() {
 
 
-                var map = new google.maps.Map(document.getElementById('mapdiv'),{
-                    center:{
-                        //centeren op Gent
-                        lat: 51.0543,
-                        lng: 3.7174
-                    },
-                    zoom: 4,
-                    disableDefaultUI: true,
-                    scrollwheel: false
+                    var map = new google.maps.Map(document.getElementById('mapdiv'),{
+                        center:{
+                            //centeren op Gent
+                            lat: 51.0543,
+                            lng: 3.7174
+                        },
+                        zoom: 4,
+                        disableDefaultUI: true,
+                        scrollwheel: false
 
-                });
+                    });
 
                 var infos = [];
                 var mkList = [];
@@ -99,20 +99,9 @@
 
                     function locationChecker(search){
                         for (var i = 0; i < mkList.length; i++){
-                            console.log(mkList[i]);
-                            if ( mkList[i][0] === search[0] && mkList[i][1] === search[1] && mkList[i] !== search[2] ){
-                                //contentMarker += mkList[i][3];
-                                contentMarker = '<div id="contentMarker">'+
-                                    '<div id="siteNotice">'+
-                                    '</div>'+
-                                    '<h1 id="firstHeading" class="firstHeading">{{$marker->title}}</h1>'+
-                                    '<h2 id="secondHeading" class="secondHeading">{{$marker->gigdate}}</h2>'+
-                                    '<div id="bodyContent">'+
-                                    '<p>{{$marker->content}}</p>'+
-                                    '<a href="{{ route('content.blog', ['id' => $marker->id]) }}">Lees meer</a>'+
-                                    '</div>'+
-                                    '</div>' + mkList[i][2];
-                                console.log('meme');
+                            if ( mkList[i][0] === search[0] && mkList[i][1] === search[1]){
+                                contentMarker += mkList[i][2]; //nieuwe blog toevoegen aan marker description
+                                mkList.pop(); //blog uit checklist verwijderen zodat deze niet steeds opnieuw wordt toegevoegd.
                             }
                         }
                     }
