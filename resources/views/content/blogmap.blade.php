@@ -39,14 +39,16 @@
                             var lng = {{$marker->long}};
                             var search = [{{$marker->lat}},{{$marker->long}}, {{$marker->id}}];
                             var contentMarker = '<div id="contentMarker">'+
-                                '<div id="siteNotice">'+
-                                '</div>'+
+                                '<div><img src="{{ asset('images/' . $marker->imageurl) }}" class="blogimage-marker"></div>' +
+                                '<div id="textMarker">' +
                                 '<h1 id="firstHeading" class="firstHeading">{{$marker->title}}</h1>'+
                                 '<h2 id="secondHeading" class="secondHeading">{{$marker->gigdate}}</h2>'+
                                 '<div id="bodyContent">'+
                                 '<p>{{$marker->content}}</p>'+
                                 '<a href="{{ route('content.blog', ['id' => $marker->id]) }}">Lees meer</a>'+
-                                '</div>'+
+                                '</div>' +
+                                '<hr class="markerBreak">' + 
+                                '</div>' +
                                 '</div>';
 
                             locationChecker(search);

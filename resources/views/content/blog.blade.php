@@ -20,6 +20,12 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{ asset('images/' . $blog->imageurl) }}" class="img-responsive">
+        </div>
+    </div>
+
     {{--<div class="row">
         <div class="col-md-12">
             <p>Likes: </p>

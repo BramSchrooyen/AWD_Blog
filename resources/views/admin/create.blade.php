@@ -18,7 +18,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <form action="{{ route('admin.create') }}" method="post">
+            <form action="{{ route('admin.create') }}" method="post" enctype="multipart/form-data"> {{--enctype dient om files in de form te kunnen meegeven--}}
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" name="title">
@@ -29,9 +29,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="content">Date of gig</label>
+                    <label for="gigdate">Date of gig</label>
                     <input type="text" class="form-control" id="gigdate" name="gigdate">
                 </div>
+
+                <div class="form-group">
+                    <label for="image">Upload image</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+
                 {{ csrf_field() }}
 
                 @foreach($tags as $tag)
